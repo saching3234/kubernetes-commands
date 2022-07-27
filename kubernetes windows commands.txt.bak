@@ -1,6 +1,6 @@
 #download and save the kubectl and minikube in the environment 
 #variable by saving in the local folder.
-#for checking the minikube version
+#for checkin ght the minikube version
 minikube version
 
 #starting the minikube with docker driver
