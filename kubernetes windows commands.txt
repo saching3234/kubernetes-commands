@@ -1,0 +1,83 @@
+#download and save the kubectl and minikube in the environment 
+#variable by saving in the local folder.
+#for checkin ght the minikube version
+minikube version
+
+#starting the minikube with docker driver
+minikube start --driver=docker
+
+#for checking the minikube status
+minikube status
+#above command will create single node cluster
+
+#to get info about cluster
+kubectl cluster-info
+
+#get the node details
+kubectl get node
+
+#to get the environment details
+minikube docker-env
+
+#copy last line starting from @FOR
+#on cmd and enter
+
+#to read the docker images
+docker images
+
+#create the docker images of your project
+docker build -t projectname:version_no
+
+#creating the deployement object
+kubectl create deployement namefordeployement --image=projectname:version_no --port=8080
+
+#to see the deployement
+kubectl get deployement
+
+#to know about specific deployement details
+kubectl descibe deployement deployement name
+
+#to see the pods
+kubectl get pods
+
+#to see the logs of pod
+kubectl logs podname
+
+#to see the deployements
+kubectl get deployements
+
+#to expose the deployement with outside world
+kubectl expose deployement deployement_name --type=NodePort
+
+#to get ip address of exposed service
+kubectl get service
+
+#to get the IP and Port to see the webpage 
+minikube service service_name --url
+
+#to check the health or status of componet pod etc
+minikube dashboard
+
+#to delete the service
+kubectl delete service service_name
+
+#to delete the deployement
+kubectl delete deployement deployement_name
+ 
+#to see the pods
+kubectl get pods
+
+#to see the service
+kubectl get svc
+
+#to see the deployements 
+kubectl get deployements	
+
+#to stop a minikube
+minikube stop
+
+#to see the nodes
+kubectl get nodes
+
+#to delete the minikube
+ minikube delete
